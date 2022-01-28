@@ -1,0 +1,45 @@
+*{
+    font-size: 35px;
+    width: 100vh;
+}
+
+/*1*/
+body>div{
+    background: linear-gradient(45deg,
+     #7fffd4 5%, #f0ffff 15%,  #7fffd4 15%, #f0ffff 30%,  #7fffd4 30%, #f0ffff 45%,
+     #7fffd4 45%, #f0ffff 60%,  #7fffd4 60%, #f0ffff 75%,  #7fffd4 75%, #f0ffff 90%, #7fffd4 90%);
+}
+
+/*2*/
+a[href*="htmlweb"]{
+    color: rgb(180, 100, 255);
+}
+
+/*3*/
+a[href*="htmlweb"]:first-child {
+    background-image:  radial-gradient(ellipse at bottom, #fa80fa, transparent);
+}
+ 
+/*4*/
+a[href$="/css"]:nth-child(2):hover{
+    border: solid 10px;
+    border-color: rgb(255, 84, 84)  rgb(255, 182, 98) rgb(255, 182, 98) rgb(255, 84, 84);
+    border-radius:  50% 20% / 10% 40%;
+} 
+
+/*5*/
+/* a:not(:only-child){
+    background-color: rgb(255, 252, 66);
+} */
+a:not(:only-child):visited{
+    color:yellow;
+}
+
+/*selection не поддерживает font-weight*/
+/*https://developer.mozilla.org/ru/docs/Web/CSS/::selection*/
+a:last-child::selection{
+    font-weight: bold;
+    text-shadow:  1px -1px 0px #ff7878;
+    color: #ff7878;
+    background-color: rgb(169, 255, 169);
+}
